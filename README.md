@@ -165,7 +165,7 @@ Assuming Cannacoin uses similar dependencies as Bitcoin, install the following:
    listen=1
 
    # Specify the port (default is 8333 for Bitcoin; replace with Cannacoin's port if different)
-   port=8333
+   port=7143
 
    # Allow other nodes to connect
    discover=1
@@ -213,9 +213,8 @@ Assuming Cannacoin uses similar dependencies as Bitcoin, install the following:
 
 3. **Allow Cannacoin Port**:
    ```bash
-   sudo ufw allow 8333/tcp
+   sudo ufw allow 7143/tcp
    ```
-   - **Replace `8333`** with Cannacoin's port if different.
 
 4. **Enable UFW**:
    ```bash
@@ -297,7 +296,7 @@ Assuming Cannacoin uses similar dependencies as Bitcoin, install the following:
    - From another machine or network, attempt to connect to your seed node to ensure it's reachable.
    - Example using `telnet`:
      ```bash
-     telnet your_server_ip 8333
+     telnet your_server_ip 7143
      ```
    - A successful connection indicates that the port is open and the node is accepting connections.
 
@@ -428,14 +427,14 @@ server=1
 daemon=1
 
 # Network Settings
-port=8333
-rpcport=8332
-externalip=seed.cannacoin.com
+port=7143
+rpcport=7142
+externalip=cannacoin.duckdns.org
 
 # Peer Discovery
 discover=1
-addnode=<peer1_ip>:8333
-addnode=<peer2_ip>:8333
+addnode=<peer1_ip>:7143
+addnode=<peer2_ip>:7143
 # Add more peers as needed
 
 # Connection Limits
